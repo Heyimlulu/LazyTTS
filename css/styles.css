@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-webhook {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-webhook .checkbox {
+  font-weight: 400;
+}
+
+.form-webhook .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-webhook input[type="floatingWebhook"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-webhook input[type="floatingUsername"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-webhook input[type="floatingMessage"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-webhook button[type="submit"] {
+  background: #5865F2;
+  border-color: #5865F2;
+}

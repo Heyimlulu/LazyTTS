@@ -46,8 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "username" => $username,
 
         // Avatar URL.
-        // Uncoment to replace image set in webhook
-        //"avatar_url" => "https://ru.gravatar.com/userimage/28503754/1168e2bddca84fec2a63addb348c571d.jpg?size=512",
+        "avatar_url" => "https://raw.githubusercontent.com/Heyimlulu/LazyTTS/main/img/smileyface.jpg?token=AOVT7O4MZYE67CPEM3JHUTLA4CAMY",
 
         // Text-to-speech
         "tts" => $tts,
@@ -72,7 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Print success message
     print("Message has been sent!");
-        
-    unset($_POST);
 }
+unset($_POST);
 ?>

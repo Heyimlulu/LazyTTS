@@ -5,31 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LazyTTS</title>
-    <link rel="stylesheet" href="./css/tailwind.css">
-    <style>
-      .error-input {
-		    border: 0.3em solid red;
-	    }
-
-	    .error {
-    	  font-size: 1em;
-    	  color: red;
-    	  font-weight: 700;
-	    }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/squares.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body class="bg-gray-900">
-    <header class="text-gray-400 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-xl">LazyTTS</span>
-          </a>
-        </div>
-      </header>
+<body>
 
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <main class="form-webhook">
+    <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST">
+      <h1 class="h3 mb-3 fw-normal">Send message to Discord Webhook</h1>
+      <div class="form-floating">
+      <input type="text" class="form-control" id="floatingWebhook" placeholder="https://">
+      <label for="floatingWebhook">Webhook URL</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingUsername" placeholder="Username">
+      <label for="floatingUsername">Username</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingMessage" placeholder="Message">
+      <label for="floatingMessage">Message</label>
+    </div>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" id="tts" name="tts"> Enable Text-To-Speech
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+    </form>
+  </main>
+
+  <!--
     <section class="text-gray-400 body-font">
         <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
           <div class="lg:w-2/6 md:w-1/2 bg-gray-800 bg-opacity-50 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 m-auto">
@@ -60,6 +81,7 @@
           </div>
         </div>
       </section>
+      -->
 </body>
-<script src="./js/form-validation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
