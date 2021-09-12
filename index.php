@@ -27,30 +27,13 @@
     </ul>
   </div>
 
-  <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">LazyTTS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Getting Started</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <main class="form-webhook">
   <?php include('./webhook.php'); ?>
     <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST">
-      <h1 class="h3 mb-3 fw-normal">Send message to Discord Webhook</h1>
-      <div class="form-floating">
+
+    <h1 class="h3 mb-3 fw-normal">Send message to Discord Webhook</h1>
+
+    <div class="form-floating">
       <input type="text" class="form-control" id="webhook" name="webhook" placeholder="https://">
       <label for="webhook">Webhook URL</label>
     </div>
@@ -62,12 +45,14 @@
       <input type="text" class="form-control" id="message" name="message" placeholder="Message">
       <label for="message">Message</label>
     </div>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" id="tts" name="tts"> Text-To-Speech
-        </label>
-      </div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" id="tts" name="tts"> Text-To-Speech
+      </label>
+    </div>
+
       <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+
     </form>
   </main>
 </body>
